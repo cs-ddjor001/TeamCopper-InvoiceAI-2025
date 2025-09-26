@@ -2113,7 +2113,7 @@ input, select, textarea {
 
 	#promo-wrapper {
 		position: relative;
-		background-image: url("images/overlay.png"), url("../../images/promo.jpg");
+		background-image: url("images/overlay.png"), url("../../images/promo-banner.jpg");
 		background-size: 192px 192px, cover;
 		background-position: top left, center center;
 		color: #fff;
@@ -2326,8 +2326,8 @@ input, select, textarea {
 /* Promo */
 
 	#promo {
-		background: rgba(255, 255, 255, 0.05);
-		border: solid 1px rgba(255, 255, 255, 0.25);
+		background: #27173A;
+		border: solid 1px #27173A;
 		border-radius: 0.5em;
 		padding: 1.75em 2.5em 1.75em 2.5em;
 		display: inline-block;
@@ -2345,7 +2345,7 @@ input, select, textarea {
 		#promo .button {
 			background: #fff;
 			border-color: rgba(255, 255, 255, 0);
-			color: #27636B;
+			color: #27173A;
 			font-size: 1.25em;
 		}
 
@@ -2394,8 +2394,8 @@ input, select, textarea {
 		text-align: center;
 		border-top: solid 1px #d2d7dc;
 		color: #a2a7ac;
-		padding-top: 4em;
-		margin-top: 6em;
+		padding-top: 1em;
+		margin-top: 1em;
 	}
 
 /* Normal */
