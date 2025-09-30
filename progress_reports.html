@@ -5,6 +5,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      #report-frame {
+        width: 100%;
+        height: 600px;
+        border: none;
+        margin-top: 20px;
+      }
+      .report-selector {
+        margin: 20px 0;
+        font-size: 1.1em;
+        padding: 8px;
+      }
+    </style>
   </head>
   <body>
     <div id="page-wrapper">
@@ -24,17 +37,30 @@
             <p>Weekly project updates</p>
           </header>
 
-          <h3>Week 1</h3>
-          <iframe 
-            src="files/CS_410_Weekly_Report_Team_Copper_Week_1.pdf" 
-            width="100%" 
-            height="600px" 
-            style="border:none;">
-          </iframe>
+          <!-- Dropdown menu -->
+          <label for="report-select"><strong>Select Week:</strong></label>
+          <select id="report-select" class="report-selector">
+            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_1.pdf">Week 1</option>
+            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_2.pdf">Week 2</option>
+            <!-- Add more weeks as needed -->
+          </select>
+
+          <!-- Iframe for displaying selected PDF -->
+          <iframe id="report-frame" src="files/CS_410_Weekly_Report_Team_Copper_Week_1.pdf"></iframe>
 
         </section>
       </div>
 
     </div>
+
+    <!-- Script to handle dropdown changes -->
+    <script>
+      const select = document.getElementById("report-select");
+      const frame = document.getElementById("report-frame");
+
+      select.addEventListener("change", function() {
+        frame.src = this.value;
+      });
+    </script>
   </body>
 </html>
