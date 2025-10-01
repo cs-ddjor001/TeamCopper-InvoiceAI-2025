@@ -86,6 +86,17 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	#logo {
+  		font-size: 1.5rem;
+  		font-weight: bold;
+	}
+
+	.superscript {
+  		font-size: 0.5em;
+  		vertical-align: super;
+  		margin-left: 2px;
+	}
+
 	body {
 		background: #f5f7fa;
 		font-family: 'Source Sans Pro', sans-serif;
