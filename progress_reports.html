@@ -29,7 +29,6 @@
         </div>
       </div>
 
-      <!-- Progress Reports Content -->
       <div class="wrapper">
         <section class="container">
           <header class="major">
@@ -42,10 +41,10 @@
           <select id="report-select" class="report-selector">
             <option value="files/CS_410_Weekly_Report_Team_Copper_Week_1.pdf">Week 1</option>
             <option value="files/CS_410_Weekly_Report_Team_Copper_Week_2.pdf">Week 2</option>
-            <!-- Add more weeks as needed -->
+            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_3.pdf">Week 3</option>
           </select>
 
-          <!-- Iframe for displaying selected PDF -->
+          <!-- Default Progress Report Displayed -->
           <iframe id="report-frame" src="files/CS_410_Weekly_Report_Team_Copper_Week_1.pdf"></iframe>
 
         </section>
@@ -53,7 +52,6 @@
 
     </div>
 
-    <!-- Script to handle dropdown changes -->
     <script>
       const select = document.getElementById("report-select");
       const frame = document.getElementById("report-frame");
