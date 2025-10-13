@@ -3005,11 +3005,6 @@ input, select, textarea {
 				margin: 0 0 1.5em 0;
 			}
 
-			.team-picture {
-				width: auto;
-				height: 256px;
-			}
-
 		/* Actions */
 
 			ul.actions li {
