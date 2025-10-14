@@ -29,8 +29,13 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	html, body{
+		height: 100%
+	}
 body {
 	line-height: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 ol, ul {
@@ -1785,6 +1790,12 @@ input, select, textarea {
 			margin: 0 0 3em 0;
 		}
 
+		.image.icon {
+			display: block;
+			width: 50%;
+			margin: 0 auto 1em;
+		}
+
 		.image.left {
 			float: left;
 			margin: 0 2em 2em 0;
@@ -2139,6 +2150,7 @@ input, select, textarea {
 		padding: 1em 0 1em 0;
 		background-image: url("images/overlay.png"), url("images/footer.svg");
 		background-size: 128px 128px,				100% 100%;
+		flex: 1 0 auto;	
 	}
 
 /* Header */

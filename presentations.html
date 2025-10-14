@@ -27,25 +27,13 @@
 									<li>
 										<a href="#">Dropdown</a>
 										<ul>
-											<li><a href="#">Lorem ipsum dolor</a></li>
-											<li><a href="#">Magna phasellus</a></li>
-											<li><a href="#">Etiam dolore nisl</a></li>
 											<li><a href="progress_reports.html">Progress Reports</a></li>
-											<li>
-												<a href="#">Phasellus consequat</a>
-												<ul>
-													<li><a href="#">Lorem ipsum dolor</a></li>
-													<li><a href="#">Phasellus consequat</a></li>
-													<li><a href="#">Magna phasellus</a></li>
-													<li><a href="#">Etiam dolore nisl</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Veroeros feugiat</a></li>
+											<li><a href="glossary.html">Glossary</a></li>
+											<li><a href="references.html">References</a></li>
 										</ul>
-									</li>
-									<li><a href="left-sidebar.html">The Problem</a></li>
-									<li class="break"><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">Presentations</a></li>
+									<li><a href="problem.html">The Problem</a></li>
+									<li class="break"><a href="solution.html">The Solution</a></li>
+									<li><a href="presentations.html">Presentations</a></li>
 								</ul>
 							</nav>
 
@@ -58,16 +46,21 @@
 
 						<!-- Content -->
 							<article id="content">
-								<header>
-									<h2>Presentations</h2>
-									<p>Our current presentation is Feasibility One. </p>
-								</header>
-								<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQg85GSZWx7HGymknoxzubm27rBKrNyIKw6F4nr0iGpGme0IHwmj--ffQxd1PVCzM61Gi6C1ZtwaW6m/pubembed?start=false&loop=false&delayms=3000"
-									 frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
+									<h2>Presentations</h2>		
 							</article>
 
-						
+						<!-- Dropdown menu -->
+						 <article id="content">
+						<label for="pres-select"><strong>Select Presentation:</strong></label>
+						<select id="pres-select" class="pres-selector">
+							<option value="https://docs.google.com/presentation/d/e/2PACX-1vQg85GSZWx7HGymknoxzubm27rBKrNyIKw6F4nr0iGpGme0IHwmj--ffQxd1PVCzM61Gi6C1ZtwaW6m/pubembed?start=false&loop=false&delayms=3000">Feasibility 1</option>
+							<option value="https://docs.google.com/presentation/d/e/2PACX-1vTROX_MCQRbd_UOrEvmcPxW4Wb2Vmjn6Eq9R76CMv4DtwNamHMPfNxJ1k2I-9orunvCZaE9UTdfvQjM/pubembed?">Feasibility 2</option>
+							<option value="https://docs.google.com/presentation/d/e/2PACX-1vTWeZkfwWbYZIlW3oyXy3I-RadNZKofr--iFJ6qZ3aZKg4-uCOi7KmK20cvb-fzREpsG0tXcTnVzxcF/pubembed?start=false&loop=false&delayms=3000">Feasibility 3</option>
+						</select>
+
+						<!-- iframe -->
+						 <iframe id="pres-frame" src="https://docs.google.com/presentation/d/e/2PACX-1vQg85GSZWx7HGymknoxzubm27rBKrNyIKw6F4nr0iGpGme0IHwmj--ffQxd1PVCzM61Gi6C1ZtwaW6m/pubembed?start=false&loop=false&delayms=3000"
+						 frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 					</div>
 				</div>
 
@@ -100,6 +93,16 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		
+		<!-- Script to handle dropdown changes -->
+			<script>
+			const select = document.getElementById("pres-select");
+			const frame = document.getElementById("pres-frame");
+
+			select.addEventListener("change", function() {
+				frame.src = this.value;
+			});
+			</script>
 
 	</body>
 </html>
