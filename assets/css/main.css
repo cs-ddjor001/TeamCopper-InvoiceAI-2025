@@ -1790,6 +1790,12 @@ input, select, textarea {
 			margin: 0 0 3em 0;
 		}
 
+		.image.icon {
+			display: block;
+			width: 50%;
+			margin: 0 auto 1em;
+		}
+
 		.image.left {
 			float: left;
 			margin: 0 2em 2em 0;
