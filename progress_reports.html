@@ -1,94 +1,124 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Progress Reports - AI²</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-      #report-frame {
-        width: 100%;
-        height: 600px;
-        border: none;
-        margin-top: 20px;
-      }
-      .report-selector {
-        margin: 20px 0;
-        font-size: 1.1em;
-        padding: 8px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="page-wrapper">
 
-      <!-- Header / Nav -->
-      <div id="header-wrapper">
-        <div id="header" class="container">
-          <h1 id="logo"><a href="index.html">AI²</a></h1>
-        </div>
+<head>
+  <title>Progress Reports - AI²</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    #report-frame {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    .report-selector {
+      margin: 20px 0;
+      font-size: 1.1em;
+      padding: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <div id="header-wrapper">
+      <div id="header" class="container">
+
+        <!-- Logo -->
+        <h1 id="logo"><a href="index.html">AI²</a></h1>
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="#">Dropdown</a>
+              <ul>
+                <li><a href="progress_reports.html">Progress Reports</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="Labs.html">Labs</a></li>
+              </ul>
+            <li><a href="problem.html">The Problem</a></li>
+            <li class="break"><a href="solution.html">The Solution</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+          </ul>
+        </nav>
+
       </div>
-
-      <div class="wrapper">
-        <section class="container">
-          <header class="major">
-            <h2>Progress Reports</h2>
-            <p>Weekly project updates</p>
-          </header>
-
-          <!-- Dropdown menu -->
-          <label for="report-select"><strong>Select Week:</strong></label>
-          <select id="report-select" class="report-selector">
-            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_1.pdf">Week 1</option>
-            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_2.pdf">Week 2</option>
-            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_3.pdf">Week 3</option>
-            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_4.pdf">Week 4</option>
-            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_5.pdf">Week 5</option>
-            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_6.pdf">Week 6</option>
-            <option value="files/CS_410_Weekly_Report_Team_Copper_Week_7.pdf">Week 7</option>
-          </select>
-
-          <!-- Default Progress Report Displayed -->
-          <iframe id="report-frame" src="files/CS_410_Weekly_Report_Team_Copper_Week_1.pdf"></iframe>
-
-        </section>
-      </div>
-
     </div>
 
-    <!-- Footer -->
-		<div id="footer-wrapper">
-			<div id="footer" class="container">
-				<header class="major">
-					<h1>Team Copper 2025</h1>
-					<h2\3><a href="https://www.odu.edu/">Old Dominion University</a></h2>
-						<h4><a href="https://www.odu.edu/computer-science">Department of Computer Science</a></h3>
-				</header>
+    <div class="wrapper">
+      <section class="container">
+        <header class="major">
+          <h2>Progress Reports</h2>
+          <p>Weekly project updates</p>
+        </header>
 
-				<div id="copyright" class="container">
-					<ul class="menu">
-						<li>Site designed and built by <a href="http://twitter.com/ajlkn">AJ</a> and released for free
-							under
-							<br />
-							the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>.
-						</li>
-						<li>&copy; Untitled. All rights reserved.</li>
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</div>
+        <!-- Dropdown menu -->
+        <label for="report-select"><strong>Select Week:</strong></label>
+        <select id="report-select" class="report-selector">
+          <option value="files/CS_410_Weekly_Report_Team_Copper_Week_1.pdf">Week 1</option>
+          <option value="files/CS_410_Weekly_Report_Team_Copper_Week_2.pdf">Week 2</option>
+          <option value="files/CS_410_Weekly_Report_Team_Copper_Week_3.pdf">Week 3</option>
+          <option value="files/CS_410_Weekly_Report_Team_Copper_Week_4.pdf">Week 4</option>
+          <option value="files/CS_410_Weekly_Report_Team_Copper_Week_5.pdf">Week 5</option>
+          <option value="files/CS_410_Weekly_Report_Team_Copper_Week_6.pdf">Week 6</option>
+          <option value="files/CS_410_Weekly_Report_Team_Copper_Week_7.pdf">Week 7</option>
+        </select>
 
-		</div>
+        <!-- Default Progress Report Displayed -->
+        <iframe id="report-frame" src="files/CS_410_Weekly_Report_Team_Copper_Week_1.pdf"></iframe>
 
+      </section>
+    </div>
 
-    <!-- Script to handle dropdown changes -->
-    <script>
-      const select = document.getElementById("report-select");
-      const frame = document.getElementById("report-frame");
+  </div>
 
-      select.addEventListener("change", function() {
-        frame.src = this.value;
-      });
-    </script>
-  </body>
+  <!-- Footer -->
+  <div id="footer-wrapper">
+    <div id="footer" class="container">
+      <header class="major">
+        <h1>Team Copper 2025</h1>
+        <h2\3><a href="https://www.odu.edu/">Old Dominion University</a></h2>
+          <h4><a href="https://www.odu.edu/computer-science">Department of Computer Science</a></h3>
+      </header>
+
+      <div id="copyright" class="container">
+        <ul class="menu">
+          <li>Site designed and built by <a href="http://twitter.com/ajlkn">AJ</a> and released for free
+            under
+            <br />
+            the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>.
+          </li>
+          <li>&copy; Untitled. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Script to handle dropdown changes -->
+  <script>
+    const select = document.getElementById("report-select");
+    const frame = document.getElementById("report-frame");
+
+    select.addEventListener("change", function () {
+      frame.src = this.value;
+    });
+  </script>
+</body>
+
 </html>
