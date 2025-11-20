@@ -6,6 +6,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
   <style>
     #report-frame {
       width: 100%;
@@ -19,6 +21,24 @@
       font-size: 1.1em;
       padding: 8px;
     }
+
+    .left-align{
+		text-align: left;
+	  }
+
+    /* Carousel */
+	  .risk-carousel {
+		  display: flex;
+		  overflow-x: auto;
+		  gap: 10px;
+		  margin-top: 20px;
+	  }
+	
+	  .risk-carousel img {
+		  max-height: 300px;
+		  border-radius: 8px;
+		  flex-shrink: 0;
+	  }
   </style>
 </head>
 
@@ -60,48 +80,184 @@
         </header>
 
         <div class="row features">
-			<section class="col-10 col-12-narrower feature">
-				<div class="image-wrapper">
-                    <br>
-                    <div class="left-align">
-                        <h3>Current Process Flow</h3>
-                    </div>
-					<a href="images/deliverables_images/Current Proccess Flow.png" target="_blank">
-                        <img src="images/deliverables_images/Current Proccess Flow.png" alt="Current Process Flow" style="max-width: 150%; height: auto;"/>
-                    </a>
-			</section>
-            <section class="col-10 col-12-narrower feature">
-				<div class="image-wrapper">
-                    <br>
-                    <div class="left-align">
-                        <h3>Solution Process Flow</h3>
-                    </div>
-					<a href="images/deliverables_images/Solution Process Flow.png" target="_blank">
-                        <img src="images/deliverables_images/Solution Process Flow.png" alt="Solution Process Flow" style="max-width: 136%; height: auto;"/>
-                    </a>
-			</section>
-            <section class="col-10 col-12-narrower feature">
-				<div class="image-wrapper">
-                    <br>
-                    <div class="left-align">
-                        <h3>Major Functional Components Diagram</h3>
-                    </div>
-					<a href="images/deliverables_images/MFCD.png" target="_blank">
-                        <img src="images/deliverables_images/MFCD.png" alt="Major Functional Components Diagram" style="max-width: 125%; height: auto;"/>
-                    </a>
-			</section>
-            <section class="col-10 col-12-narrower feature">
-				<div class="image-wrapper">
-                    <br>
-                    <div class="left-align">
-                        <h3>Competition Matrix</h3>
-                    </div>
+			    <section class="col-10 col-12-narrower feature">
+				    <div class="image-wrapper">
+              <br>
+              <div class="left-align">
+                <h3>Current Process Flow</h3>
+              </div>
+					    <a href="images/deliverables_images/Current Proccess Flow.png" target="_blank">
+                <img src="images/deliverables_images/Current Proccess Flow.png" alt="Current Process Flow" style="max-width: 150%; height: auto;"/>
+              </a>
+			    </section>
+          <section class="col-10 col-12-narrower feature">
+				    <div class="image-wrapper">
+              <br>
+                <div class="left-align">
+                  <h3>Solution Process Flow</h3>
+                </div>
+					  <a href="images/deliverables_images/Solution Process Flow.png" target="_blank">
+              <img src="images/deliverables_images/Solution Process Flow.png" alt="Solution Process Flow" style="max-width: 136%; height: auto;"/>
+            </a>
+			    </section>
+          <section class="col-10 col-12-narrower feature">
+				    <div class="image-wrapper">
+              <br>
+              <div class="left-align">
+                <h3>Major Functional Components Diagram</h3>
+              </div>
+					    <a href="images/deliverables_images/MFCD.png" target="_blank">
+                <img src="images/deliverables_images/MFCD.png" alt="Major Functional Components Diagram" style="max-width: 125%; height: auto;"/>
+              </a>
+			    </section>
+          <section class="col-10 col-12-narrower feature">
+				    <div class="image-wrapper">
+            <br>
+            <div class="left-align">
+              <h3>Competition Matrix</h3>
+            </div>
 					<a href="images/deliverables_images/Competition Matrix.png" target="_blank">
-                        <img src="images/deliverables_images/Competition Matrix.png" alt="Competition Matrix" style="max-width: 150%; height: auto;"/>
-                    </a>
-			</section>
+            <img src="images/deliverables_images/Competition Matrix.png" alt="Competition Matrix" style="max-width: 150%; height: auto;"/>
+          </a>
+			  </section>
+        <section class="col-10 col-12-narrower feature">
+          <div class="image-wrapper">
+            <br>
+          <div class="left-align">
+            <label for="risk-select"><strong>Select Risk Type:</strong></label>
+            <select id="risk-select" class="report-selector">
+              <option value="user-risk">User Risks</option>
+              <option value="customer-risk">Customer Risks</option>
+              <option value="technical-risk">Technical Risks</option>
+              <option value="security-risk">Security Risks</option>
+              <option value="legal-risk">Legal Risks</option>
+            </select>
+          </div>
+          <div class="carousel user-risk" style="display:block;">
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/User Risks-1.png" alt="User Risk 1">
+                  </li>
+                  <li class="glide__slide">  
+                    <img src="images/deliverables_images/User Risks-2.png" alt="User Risk 2">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/User Risks-3.png" alt="User Risk 3">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/User Risks-4.png" alt="User Risk 4">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/User Risks-5.png" alt="User Risk 5">
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel customer-risk" style="display:none;">
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Customer Risks-1.png" alt="Customer Risk 1">
+                  </li>
+                  <li>
+                    <img src="images/deliverables_images/Customer Risks-2.png" alt="Customer Risk 2">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Customer Risks-3.png" alt="Customer Risk 3">
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel technical-risk" style="display:none;">
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Technical Risks-1.png" alt="Technical Risk 1">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Technical Risks-2.png" alt="Technical Risk 2">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Technical Risks-3.png" alt="Technical Risk 3">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Technical Risks-4.png" alt="Technical Risk 4">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Technical Risks-5.png" alt="Technical Risk 5">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Technical Risks-6.png" alt="Technical Risk 6">
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel security-risk" style="display:none;">
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Security Risks-1.png" alt="Security Risk 1">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Security Risks-2.png" alt="Security Risk 2">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Security Risks-3.png" alt="Security Risk 3">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Security Risks-4.png" alt="Security Risk 4">
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel legal-risk" style="display:none;">
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Legal Risks-1.png" alt="Legal Risk 1">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Legal Risks-2.png" alt="Legal Risk 2">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Legal Risks-3.png" alt="Legal Risk 3">
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+              </div>
+            </div>
+          </div>
+        </section>
     </div>
-
   </div>
 
   <!-- Footer -->
@@ -137,13 +293,34 @@
 
   <!-- Script to handle dropdown changes -->
   <script>
-    const select = document.getElementById("report-select");
-    const frame = document.getElementById("report-frame");
+    const glideInstances = {};
 
-    select.addEventListener("change", function () {
-      frame.src = this.value;
+    function initGlide(selector) {
+      if (!glideInstances[selector]) {
+        const el = document.querySelector(`.carousel.${selector} > .glide`);
+        if (el) {
+          glideInstances[selector] = new Glide(el, { type: 'carousel', perView: 1 }).mount();
+        }
+      }
+    }
+
+    function updateCarousel(selectedType) {
+      document.querySelectorAll(".carousel").forEach(c => c.style.display = "none");
+      const selected = document.querySelector(`.carousel.${selectedType}`);
+      if (selected) {
+        selected.style.display = "block";
+        initGlide(selectedType);
+      }
+    }
+
+    document.getElementById("risk-select").addEventListener("change", function () {
+      updateCarousel(this.value);
     });
+
+    updateCarousel("user-risk");
+
   </script>
+
 </body>
 
 </html>
