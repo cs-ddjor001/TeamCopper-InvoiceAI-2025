@@ -1902,7 +1902,8 @@ input, select, textarea {
 				line-height: 2.5em;
 				margin-right: 0.75em;
 			}
-
+		
+	
 /* Menu */
 
 	ul.menu {
@@ -3020,6 +3021,13 @@ input, select, textarea {
 				margin: 0 0 1.5em 0;
 			}
 
+			.ul.row {
+				display: grid;
+				grid-template-columns: repeat(8, 1fr);
+				padding: 0;
+				margin: 0;
+			}
+			
 		/* Actions */
 
 			ul.actions li {
