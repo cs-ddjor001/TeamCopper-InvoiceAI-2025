@@ -2,24 +2,10 @@
 <html>
 
 <head>
-    <title>Labs - AI²</title>
+    <title>User Stories - AI²</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        #report-frame {
-            width: 100%;
-            height: 600px;
-            border: none;
-            margin-top: 20px;
-        }
-
-        .report-selector {
-            margin: 20px 0;
-            font-size: 1.1em;
-            padding: 8px;
-        }
-    </style>
 </head>
 
 <body>
@@ -53,35 +39,10 @@
 
             </div>
         </div>
-
-        <div class="wrapper">
-            <section class="container">
-                <header class="major">
-                    <h2>Labs</h2>
-                    <p>CS 410 and 411W Labs</p>
-                </header>
-
-                <!-- Dropdown menu -->
-                <label for="report-select"><strong>Select Lab:</strong></label>
-                <select id="report-select" class="report-selector">
-                    <option value="files/CS_410_ Lab_1 Group_Outline.pdf">Lab 1 Outline</option>
-                    <option value="files\Individual_Lab_1s\Lab1_Individual_Introduction_Craig.pdf">Individual Lab 1- Craig</option>
-                    <option value="files\Individual_Lab_1s\Lab1_Individual_Introduction_Dusan.pdf">Individual Lab 1- Dusan</option>
-                    <option value="files\Individual_Lab_1s\Lab1_Individual_Introduction_Julian.pdf">Individual Lab 1- Julian</option>
-                    <option value="files\Individual_Lab_1s\Lab1_Individual_Introduction_Lynda.pdf">Individual Lab 1- Lynda</option>
-                    <option value="files\Individual_Lab_1s\Lab1_Individual_Introduction_Michael.pdf">Individual Lab 1- Michael</option>
-                    <option value="files\Individual_Lab_1s\Lab1_Individual_Introduction_Quin.pdf">Individual Lab 1- Quin</option>
-                    <option value="files\Individual_Lab_1s\Lab1_Individual_Introduction_Savannah.pdf">Individual Lab 1- Savannah</option>
-                    <option value="files\Individual_Lab_1s\Lab1_Individual_Introduction_Tommy.pdf">Individual Lab 1- Tommy</option>
-                </select>
-
-                <!-- Default Progress Report Displayed -->
-                <iframe id="report-frame" src="files/CS_410_ Lab_1 Group_Outline.pdf"></iframe>
-
-            </section>
-        </div>
-
+        
     </div>
+
+
 
     <!-- Footer -->
     <div id="footer-wrapper">
@@ -114,15 +75,6 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Script to handle dropdown changes -->
-    <script>
-        const select = document.getElementById("report-select");
-        const frame = document.getElementById("report-frame");
-
-        select.addEventListener("change", function () {
-            frame.src = this.value;
-        });
-    </script>
 </body>
 
 </html>
