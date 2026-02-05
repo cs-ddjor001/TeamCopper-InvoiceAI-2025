@@ -1,6 +1,6 @@
 # About Our Project
 
-This project is aimed at solving XYZ problems. Our team is composed of the following members:
+This project is aimed at solving invoice processing problems with the use of AI to provide matches based on confidence scores. Our team is composed of the following members:
 
 - Dusan Djordjevic
 - Julian Diaz
