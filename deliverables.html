@@ -142,11 +142,11 @@
           <div class="left-align">
             <label for="risk-select"><strong>Select Risk Type:</strong></label>
             <select id="risk-select" class="report-selector">
-              <option value="user-risk">User Risks</option>
-              <option value="customer-risk">Customer Risks</option>
-              <option value="technical-risk">Technical Risks</option>
-              <option value="security-risk">Security Risks</option>
-              <option value="legal-risk">Legal Risks</option>
+              <option value="carousel risk-carousel-item user-risk">User Risks</option>
+              <option value="carousel risk-carousel-item customer-risk">Customer Risks</option>
+              <option value="carousel risk-carousel-item technical-risk">Technical Risks</option>
+              <option value="carousel risk-carousel-item security-risk">Security Risks</option>
+              <option value="carousel risk-carousel-item legal-risk">Legal Risks</option>
             </select>
           </div>
           <div class="carousel user-risk" style="display:block;">
@@ -488,14 +488,13 @@
     }
 
     function updateCarousel(selectedType) {
-      document.querySelectorAll(".carousel").forEach(c => c.style.display = "none");
+      document.querySelectorAll(".risk-carousel-item").forEach(c => c.style.display = "none");
       const selected = document.querySelector(`.carousel.${selectedType}`);
       if (selected) {
         selected.style.display = "block";
         initGlide(selectedType);
       }
-    }
-
+}
     document.getElementById("risk-select").addEventListener("change", function () {
       updateCarousel(this.value);
     });
