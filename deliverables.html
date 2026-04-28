@@ -93,7 +93,30 @@
           <h2>Deliverables</h2>
         </header>
 
-        <div class="row features">
+        <!-- Dropdown for Team Poster -->
+        <div style="display:flex; justify-content:center; margin:40px auto; max-width: 1500px; width:100%;">
+  
+          <!-- LEFT SIDE -->
+          <div style="text-align:left; margin-right:40px; flex:0 0 250px;">
+              <label for="lab2-select"><strong>Select Poster:</strong></label>
+              <select id="lab2-select" class="report-selector" data-target="lab2-frame"
+                      style="margin-top:10px; padding:8px; font-size:1em; width:100%;">
+                <option value="files/Team Poster/CS 411W - POSTER TEMPLATE.pdf">Team Poster Template</option>
+                <option value="files/Team Poster/CS 411W - DRAFT POSTER .pdf">Team Poster Draft</option>
+              </select>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div style="flex:1;">
+              <iframe id="lab2-frame" class="report-frame"
+                      src="files/Team Poster/CS 411W - POSTER TEMPLATE.pdf"
+                      style="width:100%; height:900px; border:none;">
+              </iframe>
+          </div>
+
+        </div>
+
+
 			    <section class="col-10 col-12-narrower feature">
 				    <div class="image-wrapper">
               <br>
@@ -515,18 +538,15 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Script to handle dropdown changes -->
-  <script>
-    const glideInstances = {};
-
-    function initGlide(selector) {
-      if (!glideInstances[selector]) {
-        const el = document.querySelector(`.carousel.${selector} > .glide`);
-        if (el) {
-          glideInstances[selector] = new Glide(el, { type: 'carousel', perView: 1 }).mount();
-        }
-      }
-    }
+<!-- Script to handle dropdown changes -->
+    <script>
+        document.querySelectorAll(".report-selector").forEach(select => {
+            select.addEventListener("change", function () {
+                const frameID = this.getAttribute("data-target");
+                const frame = document.getElementById(frameID);
+                frame.src = this.value;
+            });
+        });
 
     function updateCarousel(selectedType) {
       document.querySelectorAll(".risk-carousel-item").forEach(c => c.style.display = "none");
