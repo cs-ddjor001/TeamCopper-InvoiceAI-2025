@@ -81,6 +81,7 @@
             <li><a href="problem.html">The Problem</a></li>
             <li class="break"><a href="solution.html">The Solution</a></li>
             <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="Poster.html">Team Poster </a></li>
           </ul>
         </nav>
 
@@ -92,8 +93,6 @@
         <header class="major">
           <h2>Deliverables</h2>
         </header>
-
-        <div class="row features">
 			    <section class="col-10 col-12-narrower feature">
 				    <div class="image-wrapper">
               <br>
@@ -515,18 +514,15 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Script to handle dropdown changes -->
-  <script>
-    const glideInstances = {};
-
-    function initGlide(selector) {
-      if (!glideInstances[selector]) {
-        const el = document.querySelector(`.carousel.${selector} > .glide`);
-        if (el) {
-          glideInstances[selector] = new Glide(el, { type: 'carousel', perView: 1 }).mount();
-        }
-      }
-    }
+<!-- Script to handle dropdown changes -->
+    <script>
+        document.querySelectorAll(".report-selector").forEach(select => {
+            select.addEventListener("change", function () {
+                const frameID = this.getAttribute("data-target");
+                const frame = document.getElementById(frameID);
+                frame.src = this.value;
+            });
+        });
 
     function updateCarousel(selectedType) {
       document.querySelectorAll(".risk-carousel-item").forEach(c => c.style.display = "none");

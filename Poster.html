@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Deliverables - AI²</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+  <style>
+    #report-frame {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    .report-selector {
+      margin: 20px 0;
+      font-size: 1.1em;
+      padding: 8px;
+    }
+
+    .left-align{
+		text-align: left;
+	  }
+
+    /* Carousel */
+	  .risk-carousel {
+		  display: flex;
+		  overflow-x: auto;
+		  gap: 10px;
+		  margin-top: 20px;
+	  }
+	
+	  .risk-carousel img {
+		  max-height: 300px;
+		  border-radius: 8px;
+		  flex-shrink: 0;
+	  }
+
+    .glide__slide {
+      display: flex;
+      width: 600px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .glide__slide img {
+		  border-radius: 8px;
+		  flex-shrink: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <div id="header-wrapper">
+      <div id="header" class="container">
+
+        <!-- Logo -->
+        <h1 id="logo"><a href="index.html">AI²</a></h1>
+
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="#">Dropdown</a>
+              <ul>
+                <li><a href="progress_reports.html">Progress Reports</a></li>
+                <li><a href="deliverables.html">Deliverables</a></li>
+                <li><a href="glossary.html">Glossary</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="Labs.html">Labs</a></li>
+              </ul>
+            <li><a href="problem.html">The Problem</a></li>
+            <li class="break"><a href="solution.html">The Solution</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="Poster.html">Team Poster </a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+
+    <div class="wrapper">
+            <section class="container">
+                <header class="major">
+                    <h2>Team Poster</h2>
+                </header>
+
+                <!-- Dropdown for Team Poster -->
+                <div style="display:flex; justify-content:center; margin:40px auto; max-width: 1500px; width:100%;">
+        
+                <!-- LEFT SIDE -->
+                <div style="text-align:left; margin-right:40px; flex:0 0 250px;">
+                    <label for="lab2-select"><strong>Select Poster:</strong></label>
+                    <select id="lab2-select" class="report-selector" data-target="lab2-frame"
+                            style="margin-top:10px; padding:8px; font-size:1em; width:100%;">
+                        <option value="files/Team Poster/CS 411W - POSTER TEMPLATE.pdf">Team Poster Template</option>
+                        <option value="files/Team Poster/CS 411W - DRAFT POSTER .pdf">Team Poster Draft</option>
+                    </select>
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div style="flex:1;">
+                    <iframe id="lab2-frame" class="report-frame"
+                            src="files/Team Poster/CS 411W - POSTER TEMPLATE.pdf"
+                            style="width:100%; height:900px; border:none;">
+                    </iframe>
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-wrapper">
+        <div id="footer" class="container">
+            <header class="major">
+                <h1>Team Copper 2025-26</h1>
+                <h2\3><a href="https://www.odu.edu/">Old Dominion University</a></h2>
+                    <h4><a href="https://www.odu.edu/computer-science">Department of Computer Science</a></h3>
+            </header>
+
+            <div id="copyright" class="container">
+                <ul class="menu">
+                    <li>Site designed and built by <a href="http://twitter.com/ajlkn">AJ</a> and released for free
+                        under
+                        <br />
+                        the <a href="http://html5up.net/license">Creative Commons Attribution 3.0 license</a>.
+                    </li>
+                    <li>&copy; Untitled. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Script to handle dropdown changes -->
+    <script>
+        document.querySelectorAll(".report-selector").forEach(select => {
+            select.addEventListener("change", function () {
+                const frameID = this.getAttribute("data-target");
+                const frame = document.getElementById(frameID);
+                frame.src = this.value;
+            });
+        });
+    </script>
+</body>
+
+</html>
