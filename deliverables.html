@@ -142,11 +142,12 @@
           <div class="left-align">
             <label for="risk-select"><strong>Select Risk Type:</strong></label>
             <select id="risk-select" class="report-selector">
-              <option value="carousel risk-carousel-item user-risk">User Risks</option>
-              <option value="carousel risk-carousel-item customer-risk">Customer Risks</option>
-              <option value="carousel risk-carousel-item technical-risk">Technical Risks</option>
-              <option value="carousel risk-carousel-item security-risk">Security Risks</option>
-              <option value="carousel risk-carousel-item legal-risk">Legal Risks</option>
+              <option value="user-risk">User Risks</option>
+              <option value="customer-risk">Customer Risks</option>
+              <option value="technical-risk">Technical Risks</option>
+              <option value="security-risk">Security Risks</option>
+              <option value="legal-risk">Legal Risks</option>
+              <option value="summary-risk">Risk Summary</option>
             </select>
           </div>
           <div class="carousel user-risk" style="display:block;">
@@ -263,6 +264,33 @@
                   </li>
                   <li class="glide__slide">
                     <img src="images/deliverables_images/Legal_Risks_3.svg" alt="Legal Risk 3">
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel summary-risk" style="display:none;">
+            <div class="glide">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/User_Risk_Summary.svg" alt="User Risk Summary">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Customer_Risk_Summary.svg" alt="Customer Risk Summary">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Technical_Risk_Summary.svg" alt="Technical Risk Summary">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Security_Risk_Summary.svg" alt="Security Risk Summary">
+                  </li>
+                  <li class="glide__slide">
+                    <img src="images/deliverables_images/Legal_Risk_Summary.svg" alt="Legal Risk Summary">
                   </li>
                 </ul>
               </div>
@@ -446,13 +474,10 @@
             </div>
           </div>
 			  </section>    
-     </div>
-  </div>
 
     <!--Mockups-->
     <section class="col-10 col-12-narrower feature">
-      <div>
-				  <div class="image-wrapper">
+			  <div class="image-wrapper">
             <br>
             <div class="left-align">
               <h3>User Interface Mockups</h3>
@@ -474,15 +499,16 @@
                         <img src="images/deliverables_images/UI_4.svg" alt="UI Mock Up: Supplier Dashboard">
                       </li>
                     </ul>
-                 </div>
+                </div>
               <div class="glide__arrows" data-glide-el="controls">
               <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
               <button class="glide__arrow glide__arrow--right" data-glide-dir=">">></button>
               </div>
             </div>
-          </div>
-			  </section>    
-     </div>
+        </div>
+			</section>    
+
+    </div>
   </div>
 </body>
 
@@ -531,7 +557,8 @@
     }
 
     function updateCarousel(selectedType) {
-      document.querySelectorAll(".risk-carousel-item").forEach(c => c.style.display = "none");
+      document.querySelectorAll(".carousel.user-risk, .carousel.customer-risk, .carousel.technical-risk, .carousel.security-risk, .carousel.legal-risk, .carousel.summary-risk")
+    .forEach(c => c.style.display = "none");
       const selected = document.querySelector(`.carousel.${selectedType}`);
       if (selected) {
         selected.style.display = "block";
@@ -539,7 +566,7 @@
       }
 }
     document.getElementById("risk-select").addEventListener("change", function () {
-      updateCarousel(this.value);
+      updateCarousel(this.value.split(" ").pop());
     });
 
     updateCarousel("user-risk");
