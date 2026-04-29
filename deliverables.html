@@ -544,28 +544,38 @@
 
 <!-- Script to handle dropdown changes -->
     <script>
-        document.querySelectorAll(".report-selector").forEach(select => {
-            select.addEventListener("change", function () {
-                const frameID = this.getAttribute("data-target");
-                const frame = document.getElementById(frameID);
-                frame.src = this.value;
-            });
-        });
+        const glideInstances = {};
 
-    function updateCarousel(selectedType) {
-      document.querySelectorAll(".carousel.user-risk, .carousel.customer-risk, .carousel.technical-risk, .carousel.security-risk, .carousel.legal-risk, .carousel.summary-risk")
-    .forEach(c => c.style.display = "none");
-      const selected = document.querySelector(`.carousel.${selectedType}`);
-      if (selected) {
-        selected.style.display = "block";
-        initGlide(selectedType);
-      }
+function initGlide(selector) {
+  if (!glideInstances[selector]) {
+    const el = document.querySelector(`.carousel.${selector} .glide`);
+    if (el) {
+      glideInstances[selector] = new Glide(el, { type: 'carousel', perView: 1 }).mount();
+    }
+  } else {
+    glideInstances[selector].update(); // re-measure after display change
+  }
 }
-    document.getElementById("risk-select").addEventListener("change", function () {
-      updateCarousel(this.value.split(" ").pop());
-    });
 
-    updateCarousel("user-risk");
+function updateCarousel(selectedType) {
+  const allRiskTypes = ["user-risk","customer-risk","technical-risk","security-risk","legal-risk","summary-risk"];
+  allRiskTypes.forEach(type => {
+    const el = document.querySelector(`.carousel.${type}`);
+    if (el) el.style.display = "none";
+  });
+
+  const selected = document.querySelector(`.carousel.${selectedType}`);
+  if (selected) {
+    selected.style.display = "block";
+    initGlide(selectedType); // now safe — element is visible
+  }
+}
+
+document.getElementById("risk-select").addEventListener("change", function () {
+  updateCarousel(this.value); // value is already "user-risk" etc., no need to split
+});
+
+updateCarousel("user-risk");
 
   const glide2El = document.querySelector('.feat-table');
   if (glide2El) {
