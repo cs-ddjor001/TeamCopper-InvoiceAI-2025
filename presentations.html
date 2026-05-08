@@ -37,7 +37,13 @@
 						</li>
 						<li><a href="problem.html">The Problem</a></li>
 						<li class="break"><a href="solution.html">The Solution</a></li>
-						<li><a href="presentations.html">Presentations</a></li>
+						<li><a href="#">Presentations</a>
+							<ul>
+								<li><a href="#demos">Demos</a></li>
+								<li><a href="#designs">Designs</a></li>
+								<li><a href="#feasibilities">Feasibility</a></li>
+							</ul>
+						</li>
 					</ul>
 				</nav>
 
@@ -54,23 +60,22 @@
 									<h2 style="text-align:center;"><strong>Presentations</strong></h2>
 							</article>
 
-						<!-- Dropdown menu 1-->
+						<!-- Dropdown menu Demo-->
 						<div style="text-align:center; margin: 40px 0;">
-							<label for="feas-select"><strong>Select Feasibility Presentation:</strong></label>
-							<select id="feas-select" class="pres-selector">
-								<option value="https://docs.google.com/presentation/d/e/2PACX-1vQg85GSZWx7HGymknoxzubm27rBKrNyIKw6F4nr0iGpGme0IHwmj--ffQxd1PVCzM61Gi6C1ZtwaW6m/pubembed?start=false&loop=false&delayms=3000">Feasibility 1</option>
-								<option value="https://docs.google.com/presentation/d/e/2PACX-1vTROX_MCQRbd_UOrEvmcPxW4Wb2Vmjn6Eq9R76CMv4DtwNamHMPfNxJ1k2I-9orunvCZaE9UTdfvQjM/pubembed?start=false&loop=false&delayms=3000">Feasibility 2</option>
-								<option value="https://docs.google.com/presentation/d/e/2PACX-1vTWeZkfwWbYZIlW3oyXy3I-RadNZKofr--iFJ6qZ3aZKg4-uCOi7KmK20cvb-fzREpsG0tXcTnVzxcF/pubembed?start=false&loop=false&delayms=3000">Feasibility 3</option>
-								<option	value="https://docs.google.com/presentation/d/e/2PACX-1vSDrGLP9wuD4AvnZS1eIXq3lzd3wjb6ut13Dxjzozx2Vg6ifwBGPKVJYbnmCrt_AZH3lgltWWLjBwL6/pubembed?start=false&loop=false&delayms=3000">Final Feasibility</option>
+							<label for="demo-select" id="demos"><strong>Select Demo Presentation:</strong></label>
+							<select id="demo-select" class="pres-selector">
+								<option value="https://docs.google.com/presentation/d/e/2PACX-1vSKg1m3ynpCX5kzR8HwwW9HuzaOrdP7ZU5Xzrbdl04IXk8yhxTeQj12MqFnmoJJsYW3OcEEvO9BI5eh/pubembed?start=false&loop=false&delayms=3000">Demo 1</option>
+								<option value="https://docs.google.com/presentation/d/e/2PACX-1vR5e2eEaYgMdtgLTuEFGuMTjs81Y8W3iuMXoJnF-kAPGIzgcMRDvkvOMHDk7WrsdiiEbb_nPpAp4EG-/pubembed?start=false&loop=false&delayms=3000">Demo 2</option>
+								<option value="https://docs.google.com/presentation/d/e/2PACX-1vT4rnnbvf1EzEm6esBgbPj1mcLeE2WB5x6CfjduI-kF_5rEYRDf0kw_nKtUEDfLDKb14oiXB6h91AaQ/pubembed?start=false&loop=false&delayms=3000">Demo 3</option>
 							</select>
 							<!-- iframe -->
-							<iframe id="feas-frame" src="https://docs.google.com/presentation/d/e/2PACX-1vQg85GSZWx7HGymknoxzubm27rBKrNyIKw6F4nr0iGpGme0IHwmj--ffQxd1PVCzM61Gi6C1ZtwaW6m/pubembed?start=false&loop=false&delayms=3000"
-							frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> 
+							<iframe id="demo-frame" src="https://docs.google.com/presentation/d/e/2PACX-1vSKg1m3ynpCX5kzR8HwwW9HuzaOrdP7ZU5Xzrbdl04IXk8yhxTeQj12MqFnmoJJsYW3OcEEvO9BI5eh/pubembed?start=false&loop=false&delayms=3000"
+							frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 						</div>
 
-						<!-- Dropdown menu 2-->
+						<!-- Dropdown menu Design-->
 						<div style="text-align:center; margin: 40px 0;">
-							<label for="design-select"><strong>Select Design Presentation:</strong></label>
+							<label for="design-select" id="designs"><strong>Select Design Presentation:</strong></label>
 							<select id="design-select" class="pres-selector">
 								<option value="https://docs.google.com/presentation/d/e/2PACX-1vQrXDoyNDY3ym3jgH6aNbWX-DqeJ0rV8dLQY3pfnfd5ulVKDu0SCE_cLcezju8GhZ78Aj-GHC8uS7G3/pubembed?start=false&loop=false&delayms=3000">Design 1</option>
 								<option value="https://docs.google.com/presentation/d/e/2PACX-1vRwUeNFuvkZGZAr6PBbjXIGu9b42ATosooztDUaARvzB_OInxx6LPM9GU-OCVVLNHlMFeUWyZQtXKDb/pubembed?start=false&loop=false&delayms=3000">Design 2</option>
@@ -82,19 +87,19 @@
 							frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 						</div>
 
-						<!-- Dropdown menu 3-->
+						<!-- Dropdown menu Feas-->
 						<div style="text-align:center; margin: 40px 0;">
-							<label for="demo-select"><strong>Select Demo Presentation:</strong></label>
-							<select id="demo-select" class="pres-selector">
-								<option value="https://docs.google.com/presentation/d/e/2PACX-1vSKg1m3ynpCX5kzR8HwwW9HuzaOrdP7ZU5Xzrbdl04IXk8yhxTeQj12MqFnmoJJsYW3OcEEvO9BI5eh/pubembed?start=false&loop=false&delayms=3000">Demo 1</option>
-								<option value="https://docs.google.com/presentation/d/e/2PACX-1vR5e2eEaYgMdtgLTuEFGuMTjs81Y8W3iuMXoJnF-kAPGIzgcMRDvkvOMHDk7WrsdiiEbb_nPpAp4EG-/pubembed?start=false&loop=false&delayms=3000">Demo 2</option>
-								<option value="https://docs.google.com/presentation/d/e/2PACX-1vT4rnnbvf1EzEm6esBgbPj1mcLeE2WB5x6CfjduI-kF_5rEYRDf0kw_nKtUEDfLDKb14oiXB6h91AaQ/pubembed?start=false&loop=false&delayms=3000">Demo 3</option>
+							<label for="feas-select" id="feasiblities"><strong>Select Feasibility Presentation:</strong></label>
+							<select id="feas-select" class="pres-selector">
+								<option value="https://docs.google.com/presentation/d/e/2PACX-1vQg85GSZWx7HGymknoxzubm27rBKrNyIKw6F4nr0iGpGme0IHwmj--ffQxd1PVCzM61Gi6C1ZtwaW6m/pubembed?start=false&loop=false&delayms=3000">Feasibility 1</option>
+								<option value="https://docs.google.com/presentation/d/e/2PACX-1vTROX_MCQRbd_UOrEvmcPxW4Wb2Vmjn6Eq9R76CMv4DtwNamHMPfNxJ1k2I-9orunvCZaE9UTdfvQjM/pubembed?start=false&loop=false&delayms=3000">Feasibility 2</option>
+								<option value="https://docs.google.com/presentation/d/e/2PACX-1vTWeZkfwWbYZIlW3oyXy3I-RadNZKofr--iFJ6qZ3aZKg4-uCOi7KmK20cvb-fzREpsG0tXcTnVzxcF/pubembed?start=false&loop=false&delayms=3000">Feasibility 3</option>
+								<option	value="https://docs.google.com/presentation/d/e/2PACX-1vSDrGLP9wuD4AvnZS1eIXq3lzd3wjb6ut13Dxjzozx2Vg6ifwBGPKVJYbnmCrt_AZH3lgltWWLjBwL6/pubembed?start=false&loop=false&delayms=3000">Final Feasibility</option>
 							</select>
 							<!-- iframe -->
-							<iframe id="demo-frame" src="https://docs.google.com/presentation/d/e/2PACX-1vSKg1m3ynpCX5kzR8HwwW9HuzaOrdP7ZU5Xzrbdl04IXk8yhxTeQj12MqFnmoJJsYW3OcEEvO9BI5eh/pubembed?start=false&loop=false&delayms=3000"
-							frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+							<iframe id="feas-frame" src="https://docs.google.com/presentation/d/e/2PACX-1vQg85GSZWx7HGymknoxzubm27rBKrNyIKw6F4nr0iGpGme0IHwmj--ffQxd1PVCzM61Gi6C1ZtwaW6m/pubembed?start=false&loop=false&delayms=3000"
+							frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> 
 						</div>
-							
 
 						<br><br>
 
